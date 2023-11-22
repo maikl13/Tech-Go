@@ -18,6 +18,7 @@
       @php
         $route_name   = \Request::route()->getName();
         $display_name = $global_about['website_title_' . app()->getLocale()];
+        $display_image = "https://tech-go.net/share-image.png";
         if($route_name != "home") {
           if($route_name != "projects_details" && $route_name != "blog_details" && $route_name != "products_details") {
             $display_name = __('lang.' . $route_name);
@@ -26,6 +27,7 @@
               $display_name = $p['title_' . app()->getLocale()];
             }else {
               $display_name = $item['title_' . app()->getLocale()];
+              $display_image =  'https://tech-go.net/uploads/images/'. $item['image'];
             }
           }
         }
@@ -49,12 +51,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
  
+      @php
+        $route_name   = \Request::route()->getName();
+    $bootstrap = "";
+    if ($route_name != "home") {
+        $bootstrap = '<link rel="stylesheet" href="https://tech-go.net/css/bootstrap-grid.css" />';
+    }
+      @endphp
+      {!! $bootstrap !!}
+      
+      
 
-    
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.css" />
-
-
+  
 
     <link rel="icon" href="{{url('/')}}/front/assets/images/fav.png"  />
     <!-- File aos -->
@@ -69,9 +77,9 @@
 
     <link rel="stylesheet" href="{{url('/')}}/front/assets/fonts/font/all.min.css" />
 
-    <!-- File light Gallery -->
+    <!-- File light Gallery  -->
 
-    <link
+  <link
 
       rel="stylesheet"
 
@@ -79,8 +87,9 @@
 
     />
 
-    <!-- File magnific Gallery -->
-
+    <!-- File magnific Gallery  -->
+    
+    
     <link
 
       rel="stylesheet"
@@ -109,7 +118,7 @@
 
     <link rel="stylesheet" href="{{url('/')}}/front/assets/css/custom.css" />
 
-    @if(app()->getLocale() == "en")
+    @if(app()->getLocale() == "en" || app()->getLocale() == "fr")
 
     <link rel="stylesheet" href="{{url('/')}}/front/assets/css/ltr.css" />
 
@@ -123,6 +132,16 @@
 
 
 
+    <meta content="INDEX, FOLLOW" name="ROBOTS" />
+    <link rel="canonical" href="{{url('/' . app()->getLocale())}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{url('/' . app()->getLocale())}}" />
+    <meta property="og:title" content="{{$display_name}}" />
+        <meta property="og:site_name" content="{{$display_name}}" />
+    <meta property="og:image" content="{{$display_image}}" />
+        <meta name="twitter:card" content="summary" />
+    
+    
  
  @if(app()->getLocale() == "ar")
  
@@ -134,18 +153,14 @@
 
     <meta name="keywords" content="
 تيك جو أفضل شركة برمجيات سعودية ، تطبيقات جوال ، شركة برمجة تطبيقات سعودية ، شركة تصميم تطبيقات موبايل ، تصميم مواقع  ، تصميم متاجر الكترونية ، تصميم حراج ، برمجة خاصة و خدمات حلول رجال الأعمال و الشركات. شركة تيك جو , موقع تيك جو, شركة تيك جو لتصميم المواقع, تيك جو , شركة تيك جو تصميم وبرمجة مواقع الانترنت , حلول, تصميم, برمجة, تصميم مواقع, شركة تيك جو, استضافة, أفضل شركة تصميم مواقع, اقوى شركة تصميم مواقع, تصميم حراج, برمجة حراج, تصميم سوق الكتروني, تصميم متجر الكتروني, تصميم موقع شركة, استضافة موقع, شركة تصميم سعودية, افضل شركة تصميم فى السعودية, تك جو جروب , Tech-Go , Tech-Go Groub , Tech Go , تيك جو جروب , تك جو , تيك جو , تصميم موقع  , تصميم المواقع
- , تصميم ستايل, برمجة مواقع , حجز دومين , حجز نطاق , شركة تصميم مواقع , برمجة موقع , برمجة سكربت , تسويق الكترونيsms ,رسائل الجوال,vps,استضافه ,الرياض , شركة , تصميم ,  , دعم , فنى , تصميم ,  استضافة , مواقع , دعم , فنى , وبرمجة , اتات , تصميم , ستايل , تصميم , موقع , دعم , فنى , تصميم  , تصميم , ستايل ,  , ستايلات , دعم , فنى , حماية , موقع , حماية , منتدى , شركة , حماية , منتديات , عمل , موقع , شركة ,  , موقع , دكتور , موقع , ادارة , محتوى , استضافة , مواقع , اسضافة , استضافات , host , دعم , وحماية , مواقع , تصميم , هيدر , موقع , رسمى , تصميم , قبلى , تصميم , منتدى , قبلى , تصميم  ,  , منتدى , رخيص , التصميم , للتصميم , للدعم , الفنى , للحماية , داعم , مواقع , تصميم , شبكة , اسلامية , تصميم , شبكة , رومانسية , تصميم , مجلة , انفنتى , لتصميم , الانفنتى , لتصميم , ثيم , انفنتى , تصميم , جوملا , تصميم , جوملا , لتصميم , جوملا , للتصميم , الاحترافى , تصميم , احترافى , للتصميمات , الاحترافية , تصميمات , مميزة , للتصميم , الجمالى , شركة , تصميم , سعودية , شركة , تصميم , عربية , شركة , تصميم , اماراتية , سورية , شركة , امريكية , شركة , بحرينية , شركة , بحرينية , للتصميم , السعودية , للتصميم , سعودى , للتصميم , شركة , سعودية , للدعم , الفنى , الدعم , الفنى , السعودية , الاستضافة , بالسعودية , استضافة , مصرية , استضافة , عربية , للاسضافة , استضافة , موقع , تجارى , للاستضافة , التجارية , للاستضافة , القومية , استضافة , مجانية , استضافة , رخيصة , استضافة , محمية , حماية , مع , اسضافة , مستيف , مواقع ,  , منتدى , l,ru , jwldl , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقعشركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , webstdy, الرياض , تصميم , استضافة , دعم , فنى , تصميم , استايلات , مساحة , ريسيلر , منتدى , تصميم , تصميم , ستايل , تصميم , موقع , دعم , فنى , استضافة , استضافة , الرياض  منتدى , منتديات , jwldl , l,ru  , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقع شركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , webstdy , شركة , تصميم , استضافة , دعم , فنى , تصميم , استايلات , استضافة , مواقع , دعم , فنى , للمنتديات , برمجه , خاصة , وبرمجة , اسكربتات , تصميم , تصميم , ستايل , تصميم , موقع , دعم , فنى , استضافة , استضافة , تصميم , دعم , فنى , تطوير , تصميم , مواقع , تصميم , منتدى , تصميم , ستايل , تصميم , ستايلات , دعم , فنى , حماية , موقع , حماية , منتدى , شركة , حماية , منتديات , عمل , موقع , شركة , تصميم , موقع , دكتور , تصميم , موقع , ادارة , محتوى , استضافة , مواقع , اسضافة , استضافات , host , دعم , وحماية , مواقع , تصميم , هيدر , تصميم , موقع , رسمى , تصميم , قبلى , تصميم , منتدى , قبلى , تصميم , منتدى , رومانسى , تصميم , منتدى , رخيص , التصميم , للتصميم , للدعم , الفنى , للحماية , داعم , مواقع , تصميم , شبكة , اسلامية , تصميم , شبكة , رومانسية , تصميم , مجلة , انفنتى , لتصميم , الانفنتى , لتصميم , ثيم , انفنتى , تصميم , جوملا , تصميم , جوملا , لتصميم , جوملا , للتصميم , الاحترافى , تصميم , احترافى , للتصميمات , الاحترافية , تصميمات , مميزة , للتصميم , الجمالى , شركة , تصميم , سعودية , شركة , تصميم , عربية , شركة , تصميم , اماراتية , شركة , تصميم , سورية , شركة , تصميم , مواقع , امريكية , شركة , تصميم , مواقع , بحرينية , شركة , بحرينية , للتصميم , السعودية , للتصميم , سعودى , للتصميم , شركة , سعودية , للدعم , الفنى , الدعم , الفنى , السعودية , الاستضافة , بالسعودية , استضافة , مصرية , استضافة , عربية , للاسضافة , استضافة , موقع , تجارى , للاستضافة , التجارية , للاستضافة , القومية , استضافة , مجانية , استضافة , رخيصة , استضافة , محمية , حماية , مع , اسضافة , مستيف , مواقع , webstdy.com , منتدى , منتديات  , l,ru  , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقع , شركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , شركة , الرياض , تصميم , استضافة , دعم , فنى , تصميم , استايلات , مساحة , ريسيلر , منتدى , تصميم , تصميم , ستايل , تصميم , موقع , دعم , فنى , استضافة , استضافة , الرياض , منتدى , منتديات , jwldl , l,ru , jwldl , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقع , شركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , تصميم , ستايل , ستايلات , تصميم , موقع , لشركة , شركات , تصميم , لتصميم , المواقع ,  الرياض , الرياض , ويب , عمل , موقع , انشاء , منتدى , انشاء , مواقع , للتصميم , fvhl[ , jwldl , jwldl , l,hru , jwldl , sjhdg , jwldl , gav;hj , av;m , jwldl , hgvdhq , hgvdhq , ggjwldl , jwldl , hgav;hj , hgfvl[m , ,استضافة , مواقع , شركة , تقدم , خدمات , الدعم , الفني , تصميم , مواقع , الانترنت , سواء , تصميم , موقع , تصميم , منتدى , استضافة , المواقع , تصميم , الماقع , الدعم , الفني , برمجة , المواقع ,     استضافة , استضافه , استضافة , مواقع , استضافة , المواقع , شركة , استضافة , تصميم , موقع , تصميم , مواقع , الانترنت , تصميم , منتدى , تصميم , مواقع , تصميم , المواقع , تصميم , المنتديات , برمجة , مواقع , حجز , نطاق , شركة , تصميم , مواقع , برمجة , موقع , تصميم , منتديات , حجز , دومين , دعم , فني , إدارة ,  , ترخيص , منتدى , ترخيص , منتديات , تطوير , مواقع , تطوير , المواقع , رسائل , جوال , شركة برمجيات ، شركة برمجة ، شركة تصميم وبرمجة مواقع انترنت ، شركة برمجة تطبيقات، برمجة تطبيقات ايفون، برمجة تطبيقات اندرويد ، برمجة تطبيقات هواوي، برمجة موقع الكتروني، برمجة حراج ، برمجة متجر الكتروني، تصميم موقع">
+ , تصميم ستايل, برمجة مواقع , حجز دومين , حجز نطاق , شركة تصميم مواقع , برمجة موقع , برمجة سكربت , تسويق الكترونيsms ,رسائل الجوال,vps,استضافه ,الرياض , شركة , تصميم ,  , دعم , فنى , تصميم ,  استضافة , مواقع , دعم , فنى , وبرمجة , اتات , تصميم , ستايل , تصميم , موقع , دعم , فنى , تصميم  , تصميم , ستايل ,  , ستايلات , دعم , فنى , حماية , موقع , حماية , منتدى , شركة , حماية , منتديات , عمل , موقع , شركة ,  , موقع , دكتور , موقع , ادارة , محتوى , استضافة , مواقع , اسضافة , استضافات , host , دعم , وحماية , مواقع , تصميم , هيدر , موقع , رسمى , تصميم , قبلى , تصميم , منتدى , قبلى , تصميم  ,  , منتدى , رخيص , التصميم , للتصميم , للدعم , الفنى , للحماية , داعم , مواقع , تصميم , شبكة , اسلامية , تصميم , شبكة , رومانسية , تصميم , مجلة , انفنتى , لتصميم , الانفنتى , لتصميم , ثيم , انفنتى , تصميم , جوملا , تصميم , جوملا , لتصميم , جوملا , للتصميم , الاحترافى , تصميم , احترافى , للتصميمات , الاحترافية , تصميمات , مميزة , للتصميم , الجمالى , شركة , تصميم , سعودية , شركة , تصميم , عربية , شركة , تصميم , اماراتية , سورية , شركة , امريكية , شركة , بحرينية , شركة , بحرينية , للتصميم , السعودية , للتصميم , سعودى , للتصميم , شركة , سعودية , للدعم , الفنى , الدعم , الفنى , السعودية , الاستضافة , بالسعودية , استضافة , مصرية , استضافة , عربية , للاسضافة , استضافة , موقع , تجارى , للاستضافة , التجارية , للاستضافة , القومية , استضافة , مجانية , استضافة , رخيصة , استضافة , محمية , حماية , مع , اسضافة , مستيف , مواقع ,  , منتدى , l,ru , jwldl , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقعشركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , webstdy , techgo , tech-go , الرياض , تصميم , استضافة , دعم , فنى , تصميم , استايلات , مساحة , ريسيلر , منتدى , تصميم , تصميم , ستايل , تصميم , موقع , دعم , فنى , استضافة , استضافة , الرياض  منتدى , منتديات , jwldl , l,ru  , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقع شركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع   , شركة , تصميم , استضافة , دعم , فنى , تصميم , استايلات , استضافة , مواقع , دعم , فنى , للمنتديات , برمجه , خاصة , وبرمجة , اسكربتات , تصميم , تصميم , ستايل , تصميم , موقع , دعم , فنى , استضافة , استضافة , تصميم , دعم , فنى , تطوير , تصميم , مواقع , تصميم , منتدى , تصميم , ستايل , تصميم , ستايلات , دعم , فنى , حماية , موقع , حماية , منتدى , شركة , حماية , منتديات , عمل , موقع , شركة , تصميم , موقع , دكتور , تصميم , موقع , ادارة , محتوى , استضافة , مواقع , اسضافة , استضافات , host , دعم , وحماية , مواقع , تصميم , هيدر , تصميم , موقع , رسمى , تصميم , قبلى , تصميم , منتدى , قبلى , تصميم , منتدى , رومانسى , تصميم , منتدى , رخيص , التصميم , للتصميم , للدعم , الفنى , للحماية , داعم , مواقع , تصميم , شبكة , اسلامية , تصميم , شبكة , رومانسية , تصميم , مجلة , انفنتى , لتصميم , الانفنتى , لتصميم , ثيم , انفنتى , تصميم , جوملا , تصميم , جوملا , لتصميم , جوملا , للتصميم , الاحترافى , تصميم , احترافى , للتصميمات , الاحترافية , تصميمات , مميزة , للتصميم , الجمالى , شركة , تصميم , سعودية , شركة , تصميم , عربية , شركة , تصميم , اماراتية , شركة , تصميم , سورية , شركة , تصميم , مواقع , امريكية , شركة , تصميم , مواقع , بحرينية , شركة , بحرينية , للتصميم , السعودية , للتصميم , سعودى , للتصميم , شركة , سعودية , للدعم , الفنى , الدعم , الفنى , السعودية , الاستضافة , بالسعودية , استضافة , مصرية , استضافة , عربية , للاسضافة , استضافة , موقع , تجارى , للاستضافة , التجارية , للاستضافة , القومية , استضافة , مجانية , استضافة , رخيصة , استضافة , محمية , حماية , مع , اسضافة , مستيف , مواقع , webstdy.com , tech-go.net , techgo.net , tech-go.com , techgo.com , منتدى , منتديات  , l,ru  , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقع , شركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , شركة , الرياض , تصميم , استضافة , دعم , فنى , تصميم , استايلات , مساحة , ريسيلر , منتدى , تصميم , تصميم , ستايل , تصميم , موقع , دعم , فنى , استضافة , استضافة , الرياض , منتدى , منتديات , jwldl , l,ru , jwldl , تصميمات , ارشفة , الدعم , الفنى , استضافة , منتدى , استايلات , استضافة , موقع , استضافة , مواقع , استضافة , شات , للدعم , الفنى , للتصميم , لتصميم , لتصميم , مدونة , لتصميم , موقع , لتصميم , المواقع , شركة , تصميم , شركات , تصميم , تصميم , منتدى , تصميم , موقع , تصميم , ستايل , ستايلات , تصميم , موقع , لشركة , شركات , تصميم , لتصميم , المواقع ,  الرياض , الرياض , ويب , عمل , موقع , انشاء , منتدى , انشاء , مواقع , للتصميم , fvhl[ , jwldl , jwldl , l,hru , jwldl , sjhdg , jwldl , gav;hj , av;m , jwldl , hgvdhq , hgvdhq , ggjwldl , jwldl , hgav;hj , hgfvl[m , ,استضافة , مواقع , شركة , تقدم , خدمات , الدعم , الفني , تصميم , مواقع , الانترنت , سواء , تصميم , موقع , تصميم , منتدى , استضافة , المواقع , تصميم , الماقع , الدعم , الفني , برمجة , المواقع ,     استضافة , استضافه , استضافة , مواقع , استضافة , المواقع , شركة , استضافة , تصميم , موقع , تصميم , مواقع , الانترنت , تصميم , منتدى , تصميم , مواقع , تصميم , المواقع , تصميم , المنتديات , برمجة , مواقع , حجز , نطاق , شركة , تصميم , مواقع , برمجة , موقع , تصميم , منتديات , حجز , دومين , دعم , فني , إدارة ,  , ترخيص , منتدى , ترخيص , منتديات , تطوير , مواقع , تطوير , المواقع , رسائل , جوال , شركة برمجيات ، شركة برمجة ، شركة تصميم وبرمجة مواقع انترنت ، شركة برمجة تطبيقات، برمجة تطبيقات ايفون، برمجة تطبيقات اندرويد ، برمجة تطبيقات هواوي، برمجة موقع الكتروني، برمجة حراج ، برمجة متجر الكتروني، تصميم موقع">
   
-    <meta content="INDEX, FOLLOW" name="ROBOTS" />
-    <link rel="canonical" href="{{url('/' . app()->getLocale())}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content=" شركة برمجيات تيك جو - شركة برمجة وتصميم مواقع الانترنت والجوال" />
+
     <meta property="og:description" content="شركة تيك جو هي شركة برمجة وتصميم مواقع الانترنت وتطبيقات الموبايل ايفون واندرويد وهواوي ، شركة برمجيات مصرية متخصصة في برمجة المواقع وتطبيقات الجوال ."/>
-    <meta property="og:url" content="{{url('/' . app()->getLocale())}}" />
-    <meta property="og:site_name" content="شركة برمجيات تيك جو - شركة برمجة وتصميم مواقع الانترنت والجوال" />
-    <meta property="og:image" content="https://tech-go.net/share-image.png" />
+
+
     <meta property="og:locale" content="ar_AR" />
-    <meta name="twitter:card" content="summary" />
+
 @else
 
     <meta name="author" content="Tech GO" />
@@ -153,19 +168,13 @@
    <meta name="description" content="TechGo provides website design and programming services, electronic store design, and smart phone application design.">
 
     <meta name="keywords" content="
-TechGo is the best Saudi software company, mobile applications, Saudi application programming company, mobile application design company, web design, online store design, forest design, special programming and solutions services for businessmen and companies. TechGo company, TechGo website, TechGo web design company, TechGo, TechGo web design and programming company, solutions, design, programming, web design, TechGo company, hosting, the best web design company, the most powerful web design company, Haraj design, Haraj programming, online market design, online store design, company website design, website hosting, Saudi design company, best design company in Saudi Arabia, Tech Go Group, Tech-Go, Tech-Go Group, Tech Go, Tech Go Group , TechGo, TechGo, website design, web design
-  Style design, web programming, domain reservation, domain reservation, web design company, website programming, script programming, e-marketing sms, mobile messages, vps, hosting, Riyadh, company, design, support, technical, design, hosting, sites, Support, technical, programming, data, design, style, design, site, support, technical, design, design, style, styles, support, technical, protection, site, protection, forum, company, protection, forums, work, site Company, site, doctor, site, management, content, hosting, sites, hosting, hosting, host, support, protection, sites, design, header, site, official, design, tribal, design, forum, tribal, design, Forum, cheap, design, design, support, technical, protection, supportive, sites, design, network, Islamic, design, network, romantic, design, magazine, Infinity, to design, Infinity, to design, theme, Infinity, design, Joomla Design, Joomla, for design, Joomla, for professional, design, design, professional, for professional, designs, distinctive, designs, for aesthetic, design, company, design, Saudi, company, design, Arabic, company, design, Emirati, Syrian, company American, company, Bahraini, company, Bahraini, for design, Saudi, for design, Saudi, for design, Saudi, company, for, technical, support, technical, support, Saudi Arabia, hosting, in Saudi Arabia, hosting, Egyptian, hosting, Arabic, for hosting, hosting A commercial site for hosting, commercial hosting, national hosting, free, hosting, cheap, hosting, protected, protection, with hosting, hosting, hosting, sites, forum, l, ru, jwldl, designs, archiving, support, Technical, hosting, forum, styles, hosting, site, hosting, sites, hosting, chat, for technical, support, for design, for design, for design, blog, for design, site, for design, websites, company, design, companies, design, design, forum, Design, website, webstdy, Riyadh, design, hosting, support, technical, design, styles, space, reseller, forum, design, design, style, design, website, support, technical, hosting, hosting, Riyadh forum, forums, jwldl , l, ru, designs, archive, support, technical, hosting, forum, styles, hosting, site, hosting, sites, hosting, chat, for technical support, for design, for design, for design, blog, for design, website, for designing, websites company, design, companies, design, design, forum, design, site, webstdy, company, design, hosting, support, technical, design, styles, hosting, sites, support, technical, for forums, programming, special, programming, scripts, Design, design, style, design, site, support, technical, hosting, hosting, design, support, technical, development, design, websites, design, forum, design, style, design, styles, support, technical, protection, site, Protection, forum, company, protection, forums, work, site, company, design, site, doctor, design, site, management, content, hosting, sites, hosting, hosting, host, support, protection, sites, design, header, Design, site, official, design, tribal, design, forum, tribal, design, forum, romantic, design, forum, cheap, design, design, support, technical, protection, supportive, sites, design, network, Islamic, design, Network, romance, design, magazine, Infinity, to design, Infinity, to design, theme, Infinity, design, Joomla, design, Joomla, to design, Joomla, for professional design, design, professional, for professional, designs, distinctive, designs, for design, Al-Jamali company, design, Saudi, company, design, Arab, company, design, Emirati, company, design, Syrian, company, design, sites, American, company, design, sites, Bahraini, company, Bahraini, design, Saudi Arabia, Design, Saudi, design, company, Saudi, for, technical, support, technical, Saudi Arabia, hosting, in Saudi Arabia, hosting, Egyptian, hosting, Arabic, for hosting, hosting, commercial, website, for hosting, commercial, for hosting, national, hosting, Free, hosting, cheap, hosting, protected, protection, with, hosting, hosting, sites, webstdy.com, forum, forums, l, ru, designs, archiving, support, technical, hosting, forum, styles, hosting, site, Hosting, websites, hosting, chat, for technical support, design, design, design, blog, design, website, design, websites, company, design, companies, design, design, forum, design, site, company, Riyadh, design, Hosting, support, technical, design, styles, space, reseller, forum, design, design, style, design, site, technical support, hosting, hosting, Riyadh, forum, forums, jwldl, l, ru, jwldl, designs, Archive, support, technical, hosting, forum, styles, hosting, site, hosting, sites, hosting, chat, for technical, support, for design, for design,To design, blog, to design, website, to design, websites, company, design, companies, design, design, forum, design, website, design, style, styles, design, website, for, companies, companies, design, to design, websites, Riyadh, Riyadh, Web, work, site, establishment, forum, creation, sites, for design, fvhl [, jwldl, jwldl, l, hru, jwldl, sjhdg, jwldl, gav; hj, av; m, jwldl, hgvdhq, hgvdhq, ggjwldl , jwldl , hgav;hj , hgfvl[m , , hosting , sites , company , providing , services , technical , support , design , sites , internet , whether , design , site , design , forum , hosting , sites , design , sites , Support, technical, programming, websites, hosting, hosting, hosting, websites, hosting, websites, company, hosting, design, website, design, websites, internet, design, forum, design, websites, design, websites, design, forums, Programming, sites, reservation, domain, company, design, sites, programming, site, design, forums, reservation, domain, support, technical, management, license, forum, license, forums, development, sites, development, sites, messages , mobile, software company, programming company, website design and programming company, application programming company, iPhone application programming, Android application programming, Huawei application programming, website programming, forest programming, online store programming, website design">
+TechGo is the best Saudi software company , Tech Go For IT Solutions , mobile applications , tech-go.net , Saudi application programming company, mobile application design company, web design, online store design, forest design, special programming and solutions services for businessmen and companies. TechGo company, TechGo website, TechGo web design company, TechGo, TechGo web design and programming company, solutions, design, programming, web design, TechGo company, hosting, the best web design company, the most powerful web design company, Haraj design, Haraj programming, online market design, online store design, company website design, website hosting, Saudi design company, best design company in Saudi Arabia, Tech Go Group, Tech-Go, Tech-Go Group, Tech Go, Tech Go Group , TechGo, TechGo, website design, web design
+  Style design, web programming, domain reservation, domain reservation, web design company, website programming, script programming, e-marketing sms, mobile messages, vps, hosting, Riyadh, company, design, support, technical, design, hosting, sites, Support, technical, programming, data, design, style, design, site, support, technical, design, design, style, styles, support, technical, protection, site, protection, forum, company, protection, forums, work, site Company, site, doctor, site, management, content, hosting, sites, hosting, hosting, host, support, protection, sites, design, header, site, official, design, tribal, design, forum, tribal, design, Forum, cheap, design, design, support, technical, protection, supportive, sites, design, network, Islamic, design, network, romantic, design, magazine, Infinity, to design, Infinity, to design, theme, Infinity, design, Joomla Design, Joomla, for design, Joomla, for professional, design, design, professional, for professional, designs, distinctive, designs, for aesthetic, design, company, design, Saudi, company, design, Arabic, company, design, Emirati, Syrian, company American, company, Bahraini, company, Bahraini, for design, Saudi, for design, Saudi, for design, Saudi, company, for, technical, support, technical, support, Saudi Arabia, hosting, in Saudi Arabia, hosting, Egyptian, hosting, Arabic, for hosting, hosting A commercial site for hosting, commercial hosting, national hosting, free, hosting, cheap, hosting, protected, protection, with hosting, hosting, hosting, sites, forum, l, ru, jwldl, designs, archiving, support, Technical, hosting, forum, styles, hosting, site, hosting, sites, hosting, chat, for technical, support, for design, for design, for design, blog, for design, site, for design, websites, company, design, companies, design, design, forum, Design, website, Riyadh, design, hosting, support, technical, design, styles, space, reseller, forum, design, design, style, design, website, support, technical, hosting, hosting, Riyadh forum, forums, jwldl , l, ru, designs, archive, support, technical, hosting, forum, styles, hosting, site, hosting, sites, hosting, chat, for technical support, for design, for design, for design, blog, for design, website, for designing, websites company, design, companies, design, design, forum, design, site, webstdy , , techgo , tech-go , company, design, hosting, support, technical, design, styles, hosting, sites, support, technical, for forums, programming, special, programming, scripts, Design, design, style, design, site, support, technical, hosting, hosting, design, support, technical, development, design, websites, design, forum, design, style, design, styles, support, technical, protection, site, Protection, forum, company, protection, forums, work, site, company, design, site, doctor, design, site, management, content, hosting, sites, hosting, hosting, host, support, protection, sites, design, header, Design, site, official, design, tribal, design, forum, tribal, design, forum, romantic, design, forum, cheap, design, design, support, technical, protection, supportive, sites, design, network, Islamic, design, Network, romance, design, magazine, Infinity, to design, Infinity, to design, theme, Infinity, design, Joomla, design, Joomla, to design, Joomla, for professional design, design, professional, for professional, designs, distinctive, designs, for design, Al-Jamali company, design, Saudi, company, design, Arab, company, design, Emirati, company, design, Syrian, company, design, sites, American, company, design, sites, Bahraini, company, Bahraini, design, Saudi Arabia, Design, Saudi, design, company, Saudi, for, technical, support, technical, Saudi Arabia, hosting, in Saudi Arabia, hosting, Egyptian, hosting, Arabic, for hosting, hosting, commercial, website, for hosting, commercial, for hosting, national, hosting, Free, hosting, cheap, hosting, protected, protection, with, hosting, hosting, sites, webstdy.com , tech-go.net , techgo.net , tech-go.com , techgo.com , forum, forums, l, ru, designs, archiving, support, technical, hosting, forum, styles, hosting, site, Hosting, websites, hosting, chat, for technical support, design, design, design, blog, design, website, design, websites, company, design, companies, design, design, forum, design, site, company, Riyadh, design, Hosting, support, technical, design, styles, space, reseller, forum, design, design, style, design, site, technical support, hosting, hosting, Riyadh, forum, forums, jwldl, l, ru, jwldl, designs, Archive, support, technical, hosting, forum, styles, hosting, site, hosting, sites, hosting, chat, for technical, support, for design, for design,To design, blog, to design, website, to design, websites, company, design, companies, design, design, forum, design, website, design, style, styles, design, website, for, companies, companies, design, to design, websites, Riyadh, Riyadh, Web, work, site, establishment, forum, creation, sites, for design, fvhl [, jwldl, jwldl, l, hru, jwldl, sjhdg, jwldl, gav; hj, av; m, jwldl, hgvdhq, hgvdhq, ggjwldl , jwldl , hgav;hj , hgfvl[m , , hosting , sites , company , providing , services , technical , support , design , sites , internet , whether , design , site , design , forum , hosting , sites , design , sites , Support, technical, programming, websites, hosting, hosting, hosting, websites, hosting, websites, company, hosting, design, website, design, websites, internet, design, forum, design, websites, design, websites, design, forums, Programming, sites, reservation, domain, company, design, sites, programming, site, design, forums, reservation, domain, support, technical, management, license, forum, license, forums, development, sites, development, sites, messages , mobile, software company, programming company, website design and programming company, application programming company, iPhone application programming, Android application programming, Huawei application programming, website programming, forest programming, online store programming, website design">
   
-    <meta content="INDEX, FOLLOW" name="ROBOTS" />
-    <link rel="canonical" href="{{url('/' . app()->getLocale())}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content=" Tech Go Software Company - Web and mobile web design and programming company" />
     <meta property="og:description" content="TechGo is a programming and design company for websites and mobile applications iPhone, Android and Huawei, an Egyptian software company specialized in programming websites and mobile applications."/>
-    <meta property="og:url" content="{{url('/' . app()->getLocale())}}" />
-    <meta property="og:site_name" content="TechGo Software Company - Web and mobile web design and programming company" />
-    <meta property="og:image" content="https://tech-go.net/share-image.png" />
+
     <meta property="og:locale" content="en_EN" />
-    <meta name="twitter:card" content="summary" />
+
 @endif
 
  
@@ -206,13 +215,29 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
 
       <!-- Start Button Anim -->
 
-      <div class="buttonAnim whatsapp">
+      <div class="buttonAnim whatsapp conversionButton">
 
-        <a href="{{url('/')}}/whatsapp/contact?url=https://wa.me/{{$settings->where('key','contact_whatsapp')->first()->value}}?text={{$settings->where('key','whatsapp_main_text_' . app()->getLocale())->first()->value}}">
+@php
 
-          <img src="{{url('/')}}/front/assets/images/shape/whatsapp01.png" alt="whatsapp" />
+
+$whatsappContacts = [
+    $settings->where('key','contact_whatsapp')->first()->value,
+    "+971501927944"
+];
+
+$randomContact = $whatsappContacts[array_rand($whatsappContacts)];
+
+$whatsappText = $settings->where('key','whatsapp_main_text_' . app()->getLocale())->first()->value;
+
+
+@endphp
+
+
+        <a href="{{ url('/') }}/whatsapp/contact?url=https://wa.me/{{ $randomContact }}?text={{ $whatsappText }}">
+         <img src="{{url('/')}}/front/assets/images/shape/whatsapp01.png" alt="whatsapp" />
 
         </a>
+
 
       </div>
 
@@ -301,7 +326,7 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
 
                 </li>
 
-                <li class="link__Footer">
+                <li class="link__Footer conversionButton">
 
                   <a href="{{url('/')}}/whatsapp/contact?url=https://wa.me/{{$settings->where('key','contact_whatsapp')->first()->value}}" class="link__Item">{{__('lang.contact_us')}}</a>
 
@@ -959,7 +984,45 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
 
       </div>
 
-      <!-- ====== End section Footer ====== -->
+      <!-- ====== Linked-In Footer ====== -->
+
+<script type="text/javascript">
+_linkedin_partner_id = "5973801";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=5973801&fmt=gif" />
+</noscript>
+
+<!-- LinkedIn Insight Tag Code -->
+<script>
+    // Get all elements with the class 'conversionButton'
+    var conversionButtons = document.querySelectorAll('.conversionButton');
+
+    // Attach the click event listener to each button with the class 'conversionButton'
+    conversionButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+        
+            window.lintrk('track', { conversion_id: 14994057 });
+          
+        });
+    });
+</script>
+
+
+
+
+  <!-- ====== End section Footer ====== -->
 
     </footer>
 
@@ -1003,16 +1066,16 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
 
     <script>
       $(window).on("load", function() {
-        var imgs = JSON.parse($(".mock-slider-content").val())
+        // var imgs = JSON.parse($(".mock-slider-content").val())
 
-        imgs.forEach(function(item) {
-          var elm = `
-            <div>
-              <img src="`+item+`" />
-            </div>
-          `;
-          $(".mockupSC").append(elm)
-        })
+        // imgs.forEach(function(item) {
+        //   var elm = `
+        //     <div>
+        //       <img src="`+item+`" />
+        //     </div>
+        //   `;
+        //   $(".mockupSC").append(elm)
+        // })
 
           $(".mockupSC").owlCarousel({
 

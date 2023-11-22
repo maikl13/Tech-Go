@@ -8,7 +8,7 @@
 
       <div class="shapeHead shape">
 
-        <img src="<?php echo e(url('/')); ?>/front/assets/images/shape/05.png" alt="image" />
+        <img src="<?php echo e(url('/')); ?>/front/assets/images/shape/05.webp" alt="image" />
 
       </div>
 
@@ -48,28 +48,9 @@
               <p class="textInfo typed"></p>
 
  <!--
-<div>
-<button class="btn btnHead">
+e/97150192?text=مرحبا انا مهتم بطلب إستشارة تقنية">استشارة مجانية</a>
+/971502440179?text=مرحبا انا مهتم بطلب إستشارة تقنية">طلب عرض سعر</a>
 
-                <a style="display: block;
-    width: 100%;
-    height: 100%;
-    padding: 15px;" href="https://tech-go.net/whatsapp/contact?url=https://wa.me/97150192?text=مرحبا انا مهتم بطلب إستشارة تقنية">استشارة مجانية</a>
-
-              </button>
-<button class="btn btnHead" style="
-    margin-right: 10px;
-">
-
-                <a style="display: block;
-    width: 100%;
-    height: 100%;
-    padding: 15px;" href="https://tech-go.net/whatsapp/contact?url=https://wa.me/971502440179?text=مرحبا انا مهتم بطلب إستشارة تقنية">طلب عرض سعر</a>
-
-              </button>
-</div>
-             -->
-         
 
               <button class="btn btnHead">
 
@@ -84,7 +65,20 @@
                 ><?php echo e(__('lang.have_free_consulting')); ?></a>
 
               </button>
+              
+              
+             -->
+         
 
+              
+              
+              <!-- Button with LinkedIn Insight Tag -->
+<button class="btn btnHead conversionButton">
+    <a style="display: block; width: 100%; height: 100%; padding: 15px;" href="<?php echo e(url('/')); ?>/whatsapp/contact?url=https://wa.me/<?php echo e($settings->where('key', 'contact_whatsapp')->first()->value); ?>?text=<?php echo e($settings->where('key', 'whatsapp_main_text_' . app()->getLocale())->first()->value); ?>">
+        <?php echo e(__('lang.have_free_consulting')); ?>
+
+    </a>
+</button>
             </div>
 
             <!-- ==== End Content Info ===== -->

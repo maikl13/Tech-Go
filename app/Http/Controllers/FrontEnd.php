@@ -62,6 +62,8 @@ class FrontEnd extends Controller
         $views->value = $new_views;
         $views->save();        
  
+  
+        //return view('front.whatsapp')->with([ "data" => request()->get('url') ]);
         return redirect(request()->get('url'));
     }
 

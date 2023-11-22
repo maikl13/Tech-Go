@@ -57,7 +57,7 @@
 
                 <div class="contentTwo">
 
-                  <button class="btn">
+                  <button class="btn conversionButton">
 
                     <a href="{{url('/')}}/whatsapp/contact?url=https://wa.me/{{$settings->where('key','contact_whatsapp')->first()->value}}?text={{$settings->where('key','services_wh_message_' . app()->getLocale())->first()->value}} {{$item['title_' . app()->getLocale()]}}" class="link_arrow">
 

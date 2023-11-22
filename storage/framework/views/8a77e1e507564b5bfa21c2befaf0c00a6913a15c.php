@@ -58,7 +58,7 @@
 
                 <div class="contentTwo">
 
-                  <button class="btn">
+                  <button class="btn conversionButton">
 
                     <a href="<?php echo e(url('/')); ?>/whatsapp/contact?url=https://wa.me/<?php echo e($settings->where('key','contact_whatsapp')->first()->value); ?>?text=<?php echo e($settings->where('key','services_wh_message_' . app()->getLocale())->first()->value); ?> <?php echo e($item['title_' . app()->getLocale()]); ?>" class="link_arrow">
 

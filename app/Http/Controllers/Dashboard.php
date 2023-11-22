@@ -133,16 +133,16 @@ class Dashboard extends Controller
             $image = str_replace("public/images/", "", $path);
             $data['image'] = $image;
         } 
-        if ($request->has('video')) {
-            $filenameWithExt = $request->file('video')->getClientOriginalName();
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $request->file('video')->getClientOriginalExtension();
-//                $fileNameToStore = $filename . '_' . time() . '.' . $extension;
-            $t = strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999) . strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999);
-            $path = $request->file('video')->storeAs('public/videos', $t);
-            $image = str_replace("public/videos/", "", $path);
-            $data['source'] = $image;
-        } 
+//         if ($request->has('video')) {
+//             $filenameWithExt = $request->file('video')->getClientOriginalName();
+//             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+//             $extension = $request->file('video')->getClientOriginalExtension();
+// //                $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+//             $t = strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999) . strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999);
+//             $path = $request->file('video')->storeAs('public/videos', $t);
+//             $image = str_replace("public/videos/", "", $path);
+//             $data['source'] = $image;
+//         } 
         Video::create($data);
         return redirect("/admin/videos");
     }
@@ -166,16 +166,16 @@ class Dashboard extends Controller
             $image = str_replace("public/images/", "", $path);
             $data['image'] = $image;
         } 
-        if ($request->has('video')) {
-            $filenameWithExt = $request->file('video')->getClientOriginalName();
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            $extension = $request->file('video')->getClientOriginalExtension();
-//                $fileNameToStore = $filename . '_' . time() . '.' . $extension;
-            $t = strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999) . strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999);
-            $path = $request->file('video')->storeAs('public/videos', $t);
-            $image = str_replace("public/videos/", "", $path);
-            $data['source'] = $image;
-        } 
+//         if ($request->has('video')) {
+//             $filenameWithExt = $request->file('video')->getClientOriginalName();
+//             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+//             $extension = $request->file('video')->getClientOriginalExtension();
+// //                $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+//             $t = strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999) . strtotime(date("Y-m-d H:i:s")) . rand(1000000, 9999999);
+//             $path = $request->file('video')->storeAs('public/videos', $t);
+//             $image = str_replace("public/videos/", "", $path);
+//             $data['source'] = $image;
+//         } 
         $video->fill($data)->save();
         return redirect()->back();
     }

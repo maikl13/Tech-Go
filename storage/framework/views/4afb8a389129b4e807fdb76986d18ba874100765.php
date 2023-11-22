@@ -129,7 +129,7 @@
               }
           ?>
 
-            <input type="hidden" class="mock-slider-content" value='<?php echo e(json_encode($img_urls, true)); ?>' />
+            <!-- <input type="hidden" class="mock-slider-content" value='<?php echo e(json_encode($img_urls, true)); ?>' /> -->
 
           <div class="tech">
 
@@ -172,7 +172,17 @@
 
                     <section id="mockup-slider" class="owl-carousel mockupSC">
 
+                    <?php $__currentLoopData = $sliders_tablet; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                      <div>
 
+                        <a href="#"
+
+                          ><img src="<?php echo e(url('/')); ?>/storage/images/<?php echo e($s->image); ?>" alt="image"
+
+                        /></a>
+
+                      </div>
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
                     </section>
@@ -293,7 +303,7 @@
 
         <div class="shapeHead shape">
 
-          <img src="<?php echo e(url('/')); ?>/front/assets/images/shape/05.png" alt="image" />
+          <img src="<?php echo e(url('/')); ?>/front/assets/images/shape/05.webp" alt="image" />
 
         </div>
 
@@ -543,7 +553,7 @@
 
                 <!-- Start Button Anim -->
 
-                <div class="buttonAnim" data-src="/storage/videos/<?php echo e($item->source); ?>">
+                <div class="buttonAnim"  data-src="<?php echo e($item->source); ?>">
 
                   <a href="#!"><i class="fa-solid fa-play"></i></a>
 

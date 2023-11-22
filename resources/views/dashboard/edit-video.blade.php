@@ -20,16 +20,16 @@
                             </div>
                             <div class="col-12">
                                 <label>الفيديو</label>
-                                <input type="file" name="video" class="form-control" 
-                                       >
+                                <textarea style="height:200px !important;direction:ltr" name="source" class="form-control">{{$video->source}}</textarea>
+
                                 @if($video->source)
-                                <br/>
+                                <!-- <br/>
                                     <video width="auto" height="150" controls>
                                         <source src="/storage/videos/{{$video->source}}" type="video/mp4">
                                         <source src="movie.ogg" type="video/ogg">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <br/>
+                                    <br/> -->
                                 @endif                                       
                             </div>
 

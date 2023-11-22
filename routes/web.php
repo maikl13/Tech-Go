@@ -137,15 +137,7 @@ Route::get('genrate-sitemap', function(){
     return redirect(url('sitemap.xml'));
 });
 
-/*
 
-Route::get('/', function() {
-    return redirect('/ar');
-});
-
-*/
-
-// Front Routes
 
 Route::group(["middleware" => ['language']], function() {
     

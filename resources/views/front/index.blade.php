@@ -130,7 +130,7 @@
               }
           @endphp
 
-            <input type="hidden" class="mock-slider-content" value='{{json_encode($img_urls, true)}}' />
+            <!-- <input type="hidden" class="mock-slider-content" value='{{json_encode($img_urls, true)}}' /> -->
 
           <div class="tech">
 
@@ -170,7 +170,17 @@
 
                     <section id="mockup-slider" class="owl-carousel mockupSC">
 
+                    @foreach($sliders_tablet as $s)
+                      <div>
 
+                        <a href="#"
+
+                          ><img src="{{url('/')}}/storage/images/{{$s->image}}" alt="image"
+
+                        /></a>
+
+                      </div>
+                      @endforeach
 
 
                     </section>
@@ -291,7 +301,7 @@
 
         <div class="shapeHead shape">
 
-          <img src="{{url('/')}}/front/assets/images/shape/05.png" alt="image" />
+          <img src="{{url('/')}}/front/assets/images/shape/05.webp" alt="image" />
 
         </div>
 
@@ -539,7 +549,7 @@
 
                 <!-- Start Button Anim -->
 
-                <div class="buttonAnim" data-src="/storage/videos/{{$item->source}}">
+                <div class="buttonAnim"  data-src="{{$item->source}}">
 
                   <a href="#!"><i class="fa-solid fa-play"></i></a>
 

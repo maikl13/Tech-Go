@@ -19,7 +19,7 @@ class IpInfo
         $country = $this->ip_info($this->getIp(), "Country");
 
         if($country != "United Arab Emirates") {
-            abort(404);
+            // abort(404);
         }
 
         return $next($request);

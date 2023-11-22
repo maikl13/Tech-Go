@@ -23,7 +23,7 @@ class Language
         
         $language = "ar";
         if($request->segment(1)) {
-            if($request->segment(1) != "ar" && $request->segment(1) != "en") {
+            if($request->segment(1) != "ar" && $request->segment(1) != "en"&& $request->segment(1) != "fr") {
                 abort(404);
             }
             $language = $request->segment(1);

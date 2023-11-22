@@ -18,8 +18,8 @@
                             </div>
                             <div class="col-12">
                                 <label>الفيديو</label>
-                                <input type="file" name="video" class="form-control" 
-                                       >
+                                <textarea style="height:200px !important;direction:ltr" name="source" class="form-control"></textarea>
+
                             </div>
 
 
