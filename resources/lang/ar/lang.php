@@ -77,7 +77,7 @@ return [
     "linkedin" => "لينكدن",
     "facebook" => "فيس بوك",
     "twitter"  => "تويتر",
-    "youtube"  => "يوتيوب"
+    "youtube"  => "يوتيوب",
 
  
     

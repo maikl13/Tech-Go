@@ -35,6 +35,37 @@ $.ajaxSetup({
 });
 
 
+$(".listFilter li").click(function() {
+  var locale = $("#locale").val()
+  var filter = $(this).attr('data-filter');
+  var limit = $(this).parent().attr('data-limit')
+  $.ajax({
+    url:"/"+ locale +"/projects/get?category=" + filter + "&limit=" + limit,
+    type:"get",
+    success:function(data) {
+      $(".all__portfolio__Projects").html("")
+      $(".all__portfolio__Projects").append(data)
+      $(".mypup-gallery").magnificPopup({
+
+        type: "image",
+  
+        gallery: {
+  
+          enabled: true,
+  
+          navigateByImgClick: true,
+  
+          preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+  
+        }
+  
+      });
+
+    }
+  })
+})
+
+
 
 $(".my-form").on("submit", function(e) {
 
@@ -616,6 +647,47 @@ var menu__Bar;
 
   });
 
+  $("#teams-sliders").owlCarousel({
+
+    loop: true,
+
+    center: true,
+
+    items: 3,
+
+    margin: 15,
+
+    autoplay: true,
+
+    dots: true,
+
+    autoplayTimeout: 8500,
+
+    smartSpeed: 450,
+
+    responsive: {
+
+      0: {
+
+        items: 2
+
+      },
+
+      768: {
+
+        items: 2
+
+      },
+
+      1000: {
+
+        items: 5
+
+      }
+
+    }
+
+  });
 }
 
 function app() {
@@ -628,7 +700,11 @@ function app() {
 
     $(document).ready(function () {
 
-      var mixinF = mixitup(".all__portfolio__Projects");
+      // var mixinF = mixitup(".all__portfolio__Projects", {
+      //   animation: {
+      //     queueLimit:5000
+      // }
+      // });
 
     });
 

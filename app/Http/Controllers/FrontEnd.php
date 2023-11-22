@@ -38,6 +38,22 @@ use Illuminate\Support\Facades\Validator;
 class FrontEnd extends Controller
 {
 
+    public function getProjects() {
+        $settings = Setting::get();
+       
+        $limit    = request()->get('limit');
+        if(request()->get('category') != "all") {
+            $projects = Project::where("type","project")->where("category",request()->get('category'))->limit($limit)->orderBy("id","desc")->get();
+        }else {
+            $projects = Project::where("type","project")->limit($limit)->orderBy("id","desc")->get();
+        }
+        $content = "";
+        foreach($projects as $item) {
+            $content .= view('front.layouts.parts.project', ["item" => $item, "settings" => $settings])->render();
+        }
+        return $content;
+    }
+
     public function whatsappContact() {
         // update clicks
         $views = Config::where("key","whatsapp_btn_clicks")->first();
@@ -109,6 +125,11 @@ class FrontEnd extends Controller
         // $setting  = Setting::all();
         $sliders_tablet  = Sliders::where("type","tablet")->orderBy("id","asc")->get();
         $sliders_mobile  = Sliders::where("type","mobile")->orderBy("id","asc")->get();
+        $employees = Employee::orderBy("id","asc")->get();
+        foreach($employees as $m) {
+            $cat = EmployeeCategory::find($m->position_id);
+            $m->cat = $cat;
+        }
         return view('front.index')->with([
             "services" => $services,
             "steps"    => $steps,
@@ -119,6 +140,7 @@ class FrontEnd extends Controller
             "techs"    => $techs,
             "sliders_tablet" => $sliders_tablet,
             "sliders_mobile" => $sliders_mobile,
+            "team" => $employees
           
         ]);
     }

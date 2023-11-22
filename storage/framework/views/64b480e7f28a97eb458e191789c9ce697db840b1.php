@@ -28,7 +28,7 @@
 
     ?>
 
-           <div class="portOne <?php echo e($item->category); ?> mix">
+           <div class="portOne <?php echo e($item->category); ?>">
 
               <!-- Start main Port One -->
 

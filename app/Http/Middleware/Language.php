@@ -21,6 +21,9 @@ class Language
     public function handle($request, Closure $next)
     {
         if($request->segment(1)) {
+            if($request->segment(1) != "ar" && $request->segment(1) != "en") {
+                abort(404);
+            }
             app()->setlocale($request->segment(1));
         }else {
             app()->setLocale('ar');   

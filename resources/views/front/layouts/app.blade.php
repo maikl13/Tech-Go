@@ -14,8 +14,36 @@
 
     <meta name="viewport" content="initial-scale =1, user-scalable = no"/>
 
-    <title>{{$global_about['website_title_' . app()->getLocale()]}}</title>
+    <title>
+      @php
+        $route_name   = \Request::route()->getName();
+        $display_name = $global_about['website_title_' . app()->getLocale()];
+        if($route_name != "home") {
+          if($route_name != "projects_details" && $route_name != "blog_details" && $route_name != "products_details") {
+            $display_name = __('lang.' . $route_name);
+          }else {
+            if($route_name == "blog_details") {
+              $display_name = $p['title_' . app()->getLocale()];
+            }else {
+              $display_name = $item['title_' . app()->getLocale()];
+            }
+          }
+        }
+      @endphp
+      {{$display_name}}
 
+    </title>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2JVPS90X9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2JVPS90X9K');
+</script>
 
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -146,6 +174,7 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
 
   <body>
 
+    <input type="hidden" id="locale" value="{{app()->getLocale()}}" />
     <!-- start laoder -->
 
     <div class="loader hidden">

@@ -28,7 +28,7 @@
 
     @endphp
 
-           <div class="portOne {{$item->category}} mix">
+           <div class="portOne {{$item->category}}">
 
               <!-- Start main Port One -->
 

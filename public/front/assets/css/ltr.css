@@ -12,7 +12,7 @@ body,html {
   }
 @media only screen and (min-width: 1201px) {
 
-.image__ContentHeader img {
+/* .image__ContentHeader img {
 
     width: 90vh !important;
 
@@ -20,23 +20,23 @@ body,html {
 
     margin-left: 200px !important;
 
-}
+} */
 
 }
 
 @media only screen and (min-width: 1400px) {
 
-.image__Content::after {
+/* .image__Content::after {
 
     left: 60% !important;
 
-}
+} */
 
 }
 
 @media only screen and (min-width: 1201px) {
 
-.image__Content::after {
+/* .image__Content::after {
 
     left: 63% !important;
 
@@ -44,7 +44,7 @@ body,html {
 
     height: 320px;
 
-}
+} */
 
 }
 

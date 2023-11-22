@@ -1216,20 +1216,20 @@
 
             </div>
 
-            <ul class="listFilter" data-aos="fade-right">
+            <ul class="listFilter" data-limit="9" data-aos="fade-right">
 
-              <li class="navFilter active" data-filter=".app, .game, .website">
+              <li class="navFilter active" data-filter="all">
 
                 <?php echo e(__('lang.filter_all')); ?>
 
 
               </li>
 
-              <li class="navFilter" data-filter=".website"><?php echo e(__('lang.filter_web')); ?></li>
+              <li class="navFilter" data-filter="website"><?php echo e(__('lang.filter_web')); ?></li>
 
-              <li class="navFilter" data-filter=".app"><?php echo e(__('lang.filter_apps')); ?></li>
+              <li class="navFilter" data-filter="app"><?php echo e(__('lang.filter_apps')); ?></li>
 
-              <li class="navFilter" data-filter=".game"><?php echo e(__('lang.filter_games')); ?></li>
+              <li class="navFilter" data-filter="game"><?php echo e(__('lang.filter_games')); ?></li>
 
             </ul>
 
@@ -1365,7 +1365,7 @@
 
           <!-- ====== Start section title ===== -->
 
-          <div class="section__title" data-aos="fade-right">
+          <div class="section__title" style="padding-top:0" data-aos="fade-right">
 
             <p class="text text_UP"><?php echo e(__('lang.partners_of_success')); ?></p>
 
@@ -1500,6 +1500,93 @@
       </div>
 
       <!-- ======== End Section testimonials ======== -->
+
+    <?php if($settings->where('key','home_teams')->first()->value == "true"): ?>
+      <!-- ======== Start section testimonials ========= -->
+
+      <div class="testimonials">
+
+        <!-- ========= Start Container ====== -->
+
+        <div class="container">
+
+          <!-- ====== Start section title ===== -->
+
+          <div class="section__title" style="padding-top:0" data-aos="fade-right">
+
+
+            <h1 class="title"><?php echo e(__('lang.team')); ?></h1>
+
+          </div>
+
+          <!-- ====== End section title ===== -->
+
+          <!-- ====== Start All testimonials ====== -->
+
+          <div
+
+            class="all__testimonials owl-carousel"
+
+            id="teams-sliders"
+
+          >
+
+          <?php $__currentLoopData = $team; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $t): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+<!-- Start Instructor Grid  -->
+
+
+    <div class="edu-instructor-grid edu-instructor-1 edu-instructor-1">
+
+        <div class="edu-instructor">
+
+            <div class="inner">
+
+                <div class="thumbnail">
+
+                    <a href="#!">
+
+                        <img src="/uploads/teams/<?php echo e($t->image); ?>" alt="team images">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="edu-instructor-info">
+
+            <h5 class="title"><a href="#!"><?php echo e($t['title_' . app()->getLocale()]); ?></a></h5>
+
+            <span class="desc"><?php echo e($t->cat['title_' . app()->getLocale()]); ?></span>
+
+        </div>
+
+    </div>
+
+
+
+<!-- End Instructor Grid  -->
+
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+
+          </div>
+
+          <!-- ====== End All testimonials ====== -->
+
+        </div>
+
+        <!-- ========= End Container ====== -->
+
+      </div>
+
+      <!-- ======== End Section testimonials ======== -->     
+      
+      <?php endif; ?>
 
       <!-- ========= Start Section Contact US ========== -->
 

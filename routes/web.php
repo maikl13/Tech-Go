@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\URL;
+use App\Blog;
+use App\Project;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,28 +88,70 @@ Route::resource('/admin/sliders', 'SlidersController')->middleware('auth');
 Route::post('/admin/sliders/update', 'SlidersController@update')->middleware('auth');
 Route::get('/admin/sliders/{id}/delete', 'SlidersController@delete')->middleware('auth');
 
-Route::get('/', function() {
-    return redirect('/ar');
-});
 
 Route::post("/message/send", "FrontEnd@storeMedicalRequest");
 Route::post("/newsletter/submit", "FrontEnd@storeNewsletter");
 Route::get("/whatsapp/contact", "FrontEnd@whatsappContact");
 
+Route::get('genrate-sitemap', function(){
+
+    // create new sitemap object
+    $sitemap = App::make("sitemap");
+
+    // add items to the sitemap (url, date, priority, freq)
+    $sitemap->add(URL::to('/ar'), time(), '1.0', 'daily');
+    $sitemap->add(URL::to('/en'), time(), '1.0', 'daily');
+    $sitemap->add(URL::to('/ar/blog'), time(), '0.9', 'monthly');
+    $sitemap->add(URL::to('/en/blog'), time(), '0.9', 'monthly');
+
+    // get all posts from db
+    $blog = Blog::all();
+    $projects = Project::where("type","project")->get();
+
+    // add every post to the sitemap
+    foreach ($blog as $item)
+    {
+        $sitemap->add(URL::to('/ar/blog/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
+        $sitemap->add(URL::to('/en/blog/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
+    }
+
+    foreach ($projects as $item)
+    {
+        $sitemap->add(URL::to('/ar/projects/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
+        $sitemap->add(URL::to('/en/projects/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
+    }
+
+    // generate your sitemap (format, filename)
+    $sitemap->store('xml', 'sitemap');
+    // this will generate file mysitemap.xml to your public folder
+
+    return redirect(url('sitemap.xml'));
+});
+
+Route::get('/', function() {
+    return redirect('/ar');
+});
+
+
 // Front Routes
 Route::group(["prefix"=> '{locale}', "middleware" => ['language']], function() {
-    Route::get("/", "FrontEnd@index");
-    Route::get('/theme', 'FrontEnd@switchTheme');
-    Route::get("/services", "FrontEnd@services");
-    Route::get("/projects", "FrontEnd@projects");
-    Route::get("/projects/{id}/show", "FrontEnd@showProject");
-    Route::get("/products", "FrontEnd@products");
-    Route::get("/products/{id}/show", "FrontEnd@showProject");
-    Route::get("/techs", "FrontEnd@techs");
-    Route::get("/team", "FrontEnd@team");
-    Route::get("/blog", "FrontEnd@blog");
-    Route::get("/blog/{id}/show", "FrontEnd@showSingleBlog");
-    Route::get("/gallery", "FrontEnd@gallery");
+    
+    Route::get("/", "FrontEnd@index")->name("home");
+    
+    Route::get("/services", "FrontEnd@services")->name('services');
+    Route::get("/projects", "FrontEnd@projects")->name('explore_our_projects');
+    Route::get("/projects/{id}/show", "FrontEnd@showProject")->name('projects_details');
+    Route::get("/products", "FrontEnd@products")->name('our_products');
+    Route::get("/products/{id}/show", "FrontEnd@showProject")->name('products_details');
+    Route::get("/techs", "FrontEnd@techs")->name('our_tech');
+    Route::get("/team", "FrontEnd@team")->name('team');
+    Route::get("/blog", "FrontEnd@blog")->name('blog');
+    Route::get("/blog/{id}/show", "FrontEnd@showSingleBlog")->name('blog_details');
     Route::post("/contact/submit", "FrontEnd@contactSubmit");
-    Route::get("/team", "FrontEnd@team");
+
+    Route::get("/projects/get", "FrontEnd@getProjects");
+    Route::get('/theme', 'FrontEnd@switchTheme');
 });
+
+
+

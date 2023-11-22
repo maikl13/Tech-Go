@@ -728,7 +728,7 @@ Start Header
 
 .image__Content {
 
-  flex: 1 1 30rem;
+  /* flex: 1 1 30rem; */
 
   position: relative;
 
@@ -736,7 +736,7 @@ Start Header
 
 
 
-.image__ContentHeader::after {
+/* .image__ContentHeader::after {
 
   background: #ffffff;
 
@@ -766,7 +766,7 @@ Start Header
 
   animation: animButton 1.5s ease-out infinite;
 
-}
+} */
 
 
 
@@ -1048,7 +1048,7 @@ Start Header
 
   .image__Content::after {
 
-    display: none;
+    /* display: none; */
 
   }
 
@@ -3074,13 +3074,13 @@ Start section testimonials
 
 }
 
-#customers-testimonials .owl-dots .owl-dot.active {
+#customers-testimonials .owl-dots .owl-dot.active, #teams-sliders .owl-dots .owl-dot.active  {
 
   background: #c1c1c1;
 
 }
 
-#customers-testimonials .owl-dots .owl-dot {
+#customers-testimonials .owl-dots .owl-dot, #teams-sliders .owl-dots .owl-dot  {
 
   background: #eeeeee;
 
@@ -4220,7 +4220,7 @@ Start sction Header
 
   .image__ContentHeader {
 
-    margin-right: -50px;
+    margin-right: 0px;
 
   }
 

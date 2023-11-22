@@ -1208,19 +1208,19 @@
 
             </div>
 
-            <ul class="listFilter" data-aos="fade-right">
+            <ul class="listFilter" data-limit="9" data-aos="fade-right">
 
-              <li class="navFilter active" data-filter=".app, .game, .website">
+              <li class="navFilter active" data-filter="all">
 
                 {{__('lang.filter_all')}}
 
               </li>
 
-              <li class="navFilter" data-filter=".website">{{__('lang.filter_web')}}</li>
+              <li class="navFilter" data-filter="website">{{__('lang.filter_web')}}</li>
 
-              <li class="navFilter" data-filter=".app">{{__('lang.filter_apps')}}</li>
+              <li class="navFilter" data-filter="app">{{__('lang.filter_apps')}}</li>
 
-              <li class="navFilter" data-filter=".game">{{__('lang.filter_games')}}</li>
+              <li class="navFilter" data-filter="game">{{__('lang.filter_games')}}</li>
 
             </ul>
 
@@ -1356,7 +1356,7 @@
 
           <!-- ====== Start section title ===== -->
 
-          <div class="section__title" data-aos="fade-right">
+          <div class="section__title" style="padding-top:0" data-aos="fade-right">
 
             <p class="text text_UP">{{__('lang.partners_of_success')}}</p>
 
@@ -1489,6 +1489,93 @@
       </div>
 
       <!-- ======== End Section testimonials ======== -->
+
+    @if($settings->where('key','home_teams')->first()->value == "true")
+      <!-- ======== Start section testimonials ========= -->
+
+      <div class="testimonials">
+
+        <!-- ========= Start Container ====== -->
+
+        <div class="container">
+
+          <!-- ====== Start section title ===== -->
+
+          <div class="section__title" style="padding-top:0" data-aos="fade-right">
+
+
+            <h1 class="title">{{__('lang.team')}}</h1>
+
+          </div>
+
+          <!-- ====== End section title ===== -->
+
+          <!-- ====== Start All testimonials ====== -->
+
+          <div
+
+            class="all__testimonials owl-carousel"
+
+            id="teams-sliders"
+
+          >
+
+          @foreach($team as $t)
+
+<!-- Start Instructor Grid  -->
+
+
+    <div class="edu-instructor-grid edu-instructor-1 edu-instructor-1">
+
+        <div class="edu-instructor">
+
+            <div class="inner">
+
+                <div class="thumbnail">
+
+                    <a href="#!">
+
+                        <img src="/uploads/teams/{{$t->image}}" alt="team images">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="edu-instructor-info">
+
+            <h5 class="title"><a href="#!">{{$t['title_' . app()->getLocale()]}}</a></h5>
+
+            <span class="desc">{{$t->cat['title_' . app()->getLocale()]}}</span>
+
+        </div>
+
+    </div>
+
+
+
+<!-- End Instructor Grid  -->
+
+@endforeach
+
+
+
+          </div>
+
+          <!-- ====== End All testimonials ====== -->
+
+        </div>
+
+        <!-- ========= End Container ====== -->
+
+      </div>
+
+      <!-- ======== End Section testimonials ======== -->     
+      
+      @endif
 
       <!-- ========= Start Section Contact US ========== -->
 

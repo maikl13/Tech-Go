@@ -7,7 +7,42 @@
     padding-bottom: 80px;
 
 }
+.glow {
+  background: #ffffff;
 
+
+  position: absolute;
+
+  z-index: 0;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: block;
+
+  width: 300px;
+
+  height: 300px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  z-index: -1;
+
+  animation: animButton 1.5s ease-out infinite;
+}
+/* .image__Content::after {
+  left: 50% !important;
+} */
+.image__ContentHeader img {
+  width: 350px !important;
+  margin-right: 0px !important;
+  margin-left: 0;
+}
 .Services-grid .shape01, .Services-grid .shape02 {
 
     top: 0;
@@ -616,6 +651,12 @@
 }
 .btnMore {
   padding: 0;
+}
+@media screen and (max-width:1200px) {
+  .content__Info {
+    max-width: 400px;
+    min-width: auto
+  }
 }
 @media screen and (max-width: 768px) {
 
