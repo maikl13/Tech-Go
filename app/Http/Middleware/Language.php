@@ -20,15 +20,15 @@ class Language
      */
     public function handle($request, Closure $next)
     {
+        
+        $language = "ar";
         if($request->segment(1)) {
             if($request->segment(1) != "ar" && $request->segment(1) != "en") {
                 abort(404);
             }
-            app()->setlocale($request->segment(1));
-        }else {
-            app()->setLocale('ar');   
+            $language = $request->segment(1);
         }
-
+        app()->setLocale($language); 
 
 
         $settings = Setting::get();
@@ -36,6 +36,9 @@ class Language
 
         view()->share('settings', $settings);
         view()->share('global_about', $about);
+        view()->share('language_path', $language === "ar" ? "":$language);
+    
+
     
 
         return $next($request);

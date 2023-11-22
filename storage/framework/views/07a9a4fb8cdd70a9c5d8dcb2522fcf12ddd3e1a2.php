@@ -1,7 +1,6 @@
       <!-- ====== Start nav menu ======== -->
 
       <div class="menu">
-
         <!-- ====== Start container ====== -->
 
         <div class="container">
@@ -14,7 +13,7 @@
 
             <div class="logo" data-aos="fade-left">
 
-              <a href="<?php echo e(url('/' . app()->getLocale())); ?>" class="logoLink">
+              <a href="<?php echo e(url('/' . $language_path)); ?>" class="logoLink">
 
                 <img src="<?php echo e(url('/')); ?>/storage/images/<?php echo e($global_about->about_logo); ?>" alt="logo" />
 
@@ -38,11 +37,13 @@
 
                 <div class="logo logoMenu" data-aos="fade-left">
 
-                  <a href="<?php echo e(url('/' . app()->getLocale())); ?>"" class="logoLink">
+                  <a href="<?php echo e(url('/' . $language_path)); ?>"" class="logoLink">
 
                     <img src="<?php echo e(url('/')); ?>/storage/images/<?php echo e($global_about->about_logo); ?>" alt="logo" />
 
                   </a>
+
+
 
                 </div>
 
@@ -54,25 +55,25 @@
 
                   <li class="nav__Item">
 
-                    <a href="<?php echo e(url('/' . app()->getLocale())); ?>"" class="nav__Link"><?php echo e(__('lang.home')); ?></a>
+                    <a href="<?php echo e(url('/' . $language_path)); ?>"" class="nav__Link"><?php echo e(__('lang.home')); ?></a>
 
                   </li>
 
                   <li class="nav__Item">
 
-                    <a href="<?php echo e(url('/' . app()->getLocale())); ?>#Services" class="nav__Link"><?php echo e(__('lang.services')); ?></a>
+                    <a href="<?php echo e(url('/' . $language_path)); ?>#Services" class="nav__Link"><?php echo e(__('lang.services')); ?></a>
 
                   </li>
 
                   <li class="nav__Item">
 
-                    <a href="<?php echo e(url('/' . app()->getLocale())); ?>#About" class="nav__Link"><?php echo e(__('lang.about_us')); ?></a>
+                    <a href="<?php echo e(url('/' . $language_path)); ?>#About" class="nav__Link"><?php echo e(__('lang.about_us')); ?></a>
 
                   </li>
 
                   <li class="nav__Item">
 
-                    <a href="<?php echo e(url('/' . app()->getLocale())); ?>#Partner" class="nav__Link"><?php echo e(__('lang.our_partners')); ?></a>
+                    <a href="<?php echo e(url('/' . $language_path)); ?>#Partner" class="nav__Link"><?php echo e(__('lang.our_partners')); ?></a>
 
                   </li>
 
@@ -112,7 +113,7 @@
 
                 <div class="lang langAr">
 
-                  <a <?php if(app()->getLocale() == "ar"): ?> href="<?php echo e(url('/')); ?>/en" <?php else: ?> href="<?php echo e(url('/')); ?>/ar"  <?php endif; ?> class="align-center LinkLang">
+                  <a <?php if(app()->getLocale() == "ar"): ?> href="<?php echo e(url('/')); ?>/en" <?php else: ?> href="<?php echo e(url('/')); ?>"  <?php endif; ?> class="align-center LinkLang">
 
                     <span class="text">
 

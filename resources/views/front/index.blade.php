@@ -99,13 +99,13 @@
               <div class="buttonAnim" 
               
               @if(app()->getLocale() == "ar")
-              data-src="/storage/videos/{{$global_about['about_video']}}"
+              data-src="{{$global_about['about_video']}}"
               @else
-              data-src="/storage/videos/{{$global_about['about_video_en']}}"
+              data-src="{{$global_about['about_video_en']}}"
               @endif
               >
 
-                <a href="#!"><i class="fa-solid fa-play"></i></a>
+                <i class="fa-solid fa-play"></i>
 
               </div>
 
@@ -122,6 +122,15 @@
           <!-- ===== End video Banner ==== -->
 
           <!-- ===== Start Tech ======= -->
+
+          @php
+              $img_urls = array();
+              foreach($sliders_tablet as $s) {
+                $img_urls[] = "/storage/images/" . $s->image;
+              }
+          @endphp
+
+            <input type="hidden" class="mock-slider-content" value='{{json_encode($img_urls, true)}}' />
 
           <div class="tech">
 
@@ -161,17 +170,6 @@
 
                     <section id="mockup-slider" class="owl-carousel mockupSC">
 
-                    @foreach($sliders_tablet as $s)
-                      <div>
-
-                        <a href="#"
-
-                          ><img src="{{url('/')}}/storage/images/{{$s->image}}" alt="image"
-
-                        /></a>
-
-                      </div>
-                      @endforeach
 
 
 

@@ -44,11 +44,32 @@
 
               <input type="hidden" id="banner-strings" value='<?php echo e($global_about['banner_description_' . app()->getLocale()]); ?>' />
 
-              <!-- <p class="textInfo typed">خيارك الاول لتحويل فكرتك ل واقع</p> -->
-
+            
               <p class="textInfo typed"></p>
 
+ <!--
+<div>
+<button class="btn btnHead">
 
+                <a style="display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;" href="https://tech-go.net/whatsapp/contact?url=https://wa.me/97150192?text=مرحبا انا مهتم بطلب إستشارة تقنية">استشارة مجانية</a>
+
+              </button>
+<button class="btn btnHead" style="
+    margin-right: 10px;
+">
+
+                <a style="display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;" href="https://tech-go.net/whatsapp/contact?url=https://wa.me/971502440179?text=مرحبا انا مهتم بطلب إستشارة تقنية">طلب عرض سعر</a>
+
+              </button>
+</div>
+             -->
+         
 
               <button class="btn btnHead">
 

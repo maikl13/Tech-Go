@@ -115,31 +115,35 @@
 
                             <div class="col-6">
                                 <label>فيديو عربي</label>
-                                <input type="file" name="video" class="form-control"
-                                       accept="video/*" >
+                                <textarea style="height:200px !important;direction:ltr" name="about_video" class="form-control"><?php echo e($about->about_video); ?></textarea>
+
+                                <!-- <input type="file" name="video" class="form-control"
+                                       accept="video/*" > -->
                                 <?php if($about->about_video): ?>
-                                <br/>
+                                <!-- <br/>
                                     <video width="auto" height="150" controls>
                                         <source src="/storage/videos/<?php echo e($about->about_video); ?>" type="video/mp4">
                                         <source src="movie.ogg" type="video/ogg">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <br/>
+                                    <br/> -->
                                 <?php endif; ?>
                             </div>
 
                             <div class="col-6">
                                 <label>فيديو انجليزي</label>
-                                <input type="file" name="video_en" class="form-control"
-                                       accept="video/*" >
+                                <textarea style="height:200px !important;direction:ltr" name="about_video_en" class="form-control"><?php echo e($about->about_video_en); ?></textarea>
+
+                                <!-- <input type="file" name="video_en" class="form-control"
+                                       accept="video/*" > -->
                                 <?php if($about->about_video_en): ?>
-                                <br/>
+                                <!-- <br/>
                                     <video width="auto" height="150" controls>
                                         <source src="/storage/videos/<?php echo e($about->about_video_en); ?>" type="video/mp4">
                                         <source src="movie.ogg" type="video/ogg">
                                         Your browser does not support the video tag.
                                     </video>
-                                    <br/>
+                                    <br/> -->
                                 <?php endif; ?>
                             </div>
 

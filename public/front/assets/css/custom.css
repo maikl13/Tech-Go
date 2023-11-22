@@ -39,7 +39,12 @@
   left: 50% !important;
 } */
 .image__ContentHeader img {
-  width: 350px !important;
+    
+    /*   width: 350px !important;*/
+
+    width: 60vh !important;
+   
+
   margin-right: 0px !important;
   margin-left: 0;
 }
@@ -652,14 +657,29 @@
 .btnMore {
   padding: 0;
 }
+
 @media screen and (max-width:1200px) {
   .content__Info {
     max-width: 400px;
     min-width: auto
   }
+  .image__ContentHeader img {
+    width: 50vh !important;
+  }
 }
 @media screen and (max-width: 768px) {
 
+  .video {
+    width: 95%;
+  }
+  .video iframe {
+    width: 100%;
+  }
+
+  .image__ContentHeader img { 
+    height: auto !important;
+    width: 90% !important;
+  }
     .content__Header .imgProject {
 
         flex: 100%;

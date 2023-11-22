@@ -324,7 +324,7 @@ var menu__Bar;
   function removeVido() {
 
     // Function Remove Vido Ovrlay
-
+    $(".video").html("")
     overlay__Video.classList.remove("active");
 
   }
@@ -339,7 +339,7 @@ var menu__Bar;
 
 
 
-  $(".buttonAnim").click(function() {
+  $(".buttonAnim").on("click", function() {
 
     if(!$(this).hasClass('whatsapp')) {
     var link = $(this).attr('data-src')
@@ -348,6 +348,11 @@ var menu__Bar;
     }
 
   })  
+
+  $(".img_Video").on("click", function() {
+    var link = $(this).find(".buttonAnim").attr('data-src')
+    showVideo(link)
+  })
 
   
 
@@ -365,7 +370,8 @@ var menu__Bar;
 
   function showVideo(link) {
 
-    $("#video-source").attr('src', link)
+    $(".video").html(link)
+    // $("#video-source").attr('src', link)
 
     overlay__Video.classList.add("active");
 
@@ -397,55 +403,55 @@ var menu__Bar;
 
   // mockup Screen
 
-  $(".mockupSC").owlCarousel({
+  // $(".mockupSC").owlCarousel({
 
-    singleItem: true,
+  //   singleItem: true,
 
-    autoPlay: false,
+  //   autoPlay: false,
 
-    navigation: false,
+  //   navigation: false,
 
-    pagination: false,
+  //   pagination: false,
 
-    mouseDrag: true,
+  //   mouseDrag: true,
 
-    touchDrag: false,
+  //   touchDrag: false,
 
-    nav: true,
+  //   nav: true,
 
-    dots: true,
+  //   dots: true,
 
-    loop: true,
+  //   loop: true,
 
-    margin: 0,
+  //   margin: 0,
 
-    navText: false,
+  //   navText: false,
 
-    items: 1,
+  //   items: 1,
 
-    navText: [
+  //   navText: [
 
-      "<i class='fa-solid fa-chevron-right'></i>",
+  //     "<i class='fa-solid fa-chevron-right'></i>",
 
-      "<i class='fa-solid fa-chevron-left'></i>"
+  //     "<i class='fa-solid fa-chevron-left'></i>"
 
-    ],
+  //   ],
 
-    touchDrag: true,
+  //   touchDrag: true,
 
-    smartSpeed: 1300,
+  //   smartSpeed: 1000,
 
-    autoplay: true,
+  //   autoplay: false,
 
-    autoplayTimeout: 4000,
+  //   autoplayTimeout: 4000,
 
-    autoplayHoverPause: false,
+  //   autoplayHoverPause: false,
 
-    responsiveClass: true,
+  //   responsiveClass: true,
 
-    autoHeight: true
+  //   autoHeight: true
 
-  });
+  // });
 
 }
 

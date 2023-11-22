@@ -237,19 +237,6 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
 
       <div class="video">
 
-        <video id="video-source"
-
-          src=""
-
-          muted
-
-          loop
-
-          autoplay
-
-          controls
-
-        ></video>
 
       </div>
 
@@ -1021,6 +1008,71 @@ TechGo is the best Saudi software company, mobile applications, Saudi applicatio
     <!-- file Js -->
 
     <script src="<?php echo e(url('/')); ?>/front/assets/js/app.js"></script>
+
+    <script>
+      $(window).on("load", function() {
+        var imgs = JSON.parse($(".mock-slider-content").val())
+
+        imgs.forEach(function(item) {
+          var elm = `
+            <div>
+              <img src="`+item+`" />
+            </div>
+          `;
+          $(".mockupSC").append(elm)
+        })
+
+          $(".mockupSC").owlCarousel({
+
+              singleItem: true,
+
+              autoPlay: false,
+
+              navigation: false,
+
+              pagination: false,
+
+              mouseDrag: true,
+
+              touchDrag: false,
+
+              nav: true,
+
+              dots: true,
+
+              loop: true,
+
+              margin: 0,
+
+              navText: false,
+
+              items: 1,
+
+              navText: [
+
+                "<i class='fa-solid fa-chevron-right'></i>",
+
+                "<i class='fa-solid fa-chevron-left'></i>"
+
+              ],
+
+              touchDrag: true,
+
+              smartSpeed: 1000,
+
+              autoplay: true,
+
+              autoplayTimeout: 20000,
+
+              autoplayHoverPause: false,
+
+              responsiveClass: true,
+
+              autoHeight: true
+
+        });
+      })
+    </script>
 
     <script>
 

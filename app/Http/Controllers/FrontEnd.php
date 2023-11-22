@@ -290,6 +290,12 @@ class FrontEnd extends Controller
     }
 
     public function storeMedicalRequest(Request $request) {
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
         $data = $request->all();
         MedicalRequest::create($data);
         return "true";

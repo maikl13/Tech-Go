@@ -808,6 +808,18 @@ Start Header
 
 .content__Header .content__Info .btnHead {
 
+
+  /*
+    
+    height: 52px;
+    background: var(--white-01-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    */
+  
   width: 260px;
 
   height: 52px;
@@ -1272,7 +1284,7 @@ Start sction main
 
 }
 
-.buttonAnim a {
+.buttonAnim i {
 
   width: 80px;
 
@@ -1296,9 +1308,11 @@ Start sction main
 
   font-size: 17px;
 
+  cursor: pointer;
+
 }
 
-.buttonAnim a::after {
+.buttonAnim i::after {
 
   background: #ffffff;
 
@@ -2370,7 +2384,7 @@ Start Section Apps
 
 }
 
-
+/* border: 6px solid var(--bg-color); */
 
 .mobile-width {
 
@@ -2384,9 +2398,9 @@ Start Section Apps
 
   position: relative;
 
-  border: 6px solid #fff;
+  
 
-  border: 6px solid var(--bg-color);
+  border: 6px solid #fff;
 
   box-shadow: 3px 23px 50px 0 rgba(0, 0, 0, 0.3);
 

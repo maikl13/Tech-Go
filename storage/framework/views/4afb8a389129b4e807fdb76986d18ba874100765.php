@@ -98,13 +98,13 @@
               <div class="buttonAnim" 
               
               <?php if(app()->getLocale() == "ar"): ?>
-              data-src="/storage/videos/<?php echo e($global_about['about_video']); ?>"
+              data-src="<?php echo e($global_about['about_video']); ?>"
               <?php else: ?>
-              data-src="/storage/videos/<?php echo e($global_about['about_video_en']); ?>"
+              data-src="<?php echo e($global_about['about_video_en']); ?>"
               <?php endif; ?>
               >
 
-                <a href="#!"><i class="fa-solid fa-play"></i></a>
+                <i class="fa-solid fa-play"></i>
 
               </div>
 
@@ -121,6 +121,15 @@
           <!-- ===== End video Banner ==== -->
 
           <!-- ===== Start Tech ======= -->
+
+          <?php
+              $img_urls = array();
+              foreach($sliders_tablet as $s) {
+                $img_urls[] = "/storage/images/" . $s->image;
+              }
+          ?>
+
+            <input type="hidden" class="mock-slider-content" value='<?php echo e(json_encode($img_urls, true)); ?>' />
 
           <div class="tech">
 
@@ -163,17 +172,6 @@
 
                     <section id="mockup-slider" class="owl-carousel mockupSC">
 
-                    <?php $__currentLoopData = $sliders_tablet; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <div>
-
-                        <a href="#"
-
-                          ><img src="<?php echo e(url('/')); ?>/storage/images/<?php echo e($s->image); ?>" alt="image"
-
-                        /></a>
-
-                      </div>
-                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
 

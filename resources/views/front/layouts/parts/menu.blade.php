@@ -1,7 +1,6 @@
       <!-- ====== Start nav menu ======== -->
 
       <div class="menu">
-
         <!-- ====== Start container ====== -->
 
         <div class="container">
@@ -14,7 +13,7 @@
 
             <div class="logo" data-aos="fade-left">
 
-              <a href="{{url('/' . app()->getLocale())}}" class="logoLink">
+              <a href="{{url('/' . $language_path)}}" class="logoLink">
 
                 <img src="{{url('/')}}/storage/images/{{$global_about->about_logo}}" alt="logo" />
 
@@ -38,11 +37,13 @@
 
                 <div class="logo logoMenu" data-aos="fade-left">
 
-                  <a href="{{url('/' . app()->getLocale())}}"" class="logoLink">
+                  <a href="{{url('/' . $language_path)}}"" class="logoLink">
 
                     <img src="{{url('/')}}/storage/images/{{$global_about->about_logo}}" alt="logo" />
 
                   </a>
+
+
 
                 </div>
 
@@ -54,25 +55,25 @@
 
                   <li class="nav__Item">
 
-                    <a href="{{url('/' . app()->getLocale())}}"" class="nav__Link">{{__('lang.home')}}</a>
+                    <a href="{{url('/' . $language_path)}}"" class="nav__Link">{{__('lang.home')}}</a>
 
                   </li>
 
                   <li class="nav__Item">
 
-                    <a href="{{url('/' . app()->getLocale())}}#Services" class="nav__Link">{{__('lang.services')}}</a>
+                    <a href="{{url('/' . $language_path)}}#Services" class="nav__Link">{{__('lang.services')}}</a>
 
                   </li>
 
                   <li class="nav__Item">
 
-                    <a href="{{url('/' . app()->getLocale())}}#About" class="nav__Link">{{__('lang.about_us')}}</a>
+                    <a href="{{url('/' . $language_path)}}#About" class="nav__Link">{{__('lang.about_us')}}</a>
 
                   </li>
 
                   <li class="nav__Item">
 
-                    <a href="{{url('/' . app()->getLocale())}}#Partner" class="nav__Link">{{__('lang.our_partners')}}</a>
+                    <a href="{{url('/' . $language_path)}}#Partner" class="nav__Link">{{__('lang.our_partners')}}</a>
 
                   </li>
 
@@ -112,7 +113,7 @@
 
                 <div class="lang langAr">
 
-                  <a @if(app()->getLocale() == "ar") href="{{url('/')}}/en" @else href="{{url('/')}}/ar"  @endif class="align-center LinkLang">
+                  <a @if(app()->getLocale() == "ar") href="{{url('/')}}/en" @else href="{{url('/')}}"  @endif class="align-center LinkLang">
 
                     <span class="text">
 

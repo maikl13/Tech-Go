@@ -17,12 +17,18 @@ use App\Project;
 */
 
 
+Route::group(["middleware" => ["ip-info"]], function() {
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+  ]);
 
-Auth::routes();
+
 Route::get('/admin', function() {
     return redirect('/admin/home');
 });
-Route::get('/admin/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/admin/home', 'HomeController@index')->middleware('auth');
 Route::get('/admin/employees/categories', 'Employees@categories')->middleware('auth');
 Route::get('/admin/employees/categories/create', 'Employees@CreateCategories')->middleware('auth');
 Route::get('/admin/employees/categories/{id}/delete', 'Employees@deleteCategory')->middleware('auth');
@@ -87,6 +93,8 @@ Route::get('/admin/logout', 'UsersController@logout')->middleware('auth');
 Route::resource('/admin/sliders', 'SlidersController')->middleware('auth');
 Route::post('/admin/sliders/update', 'SlidersController@update')->middleware('auth');
 Route::get('/admin/sliders/{id}/delete', 'SlidersController@delete')->middleware('auth');
+});
+
 
 
 Route::post("/message/send", "FrontEnd@storeMedicalRequest");
@@ -99,11 +107,12 @@ Route::get('genrate-sitemap', function(){
     $sitemap = App::make("sitemap");
 
     // add items to the sitemap (url, date, priority, freq)
-    $sitemap->add(URL::to('/ar'), time(), '1.0', 'daily');
-    $sitemap->add(URL::to('/en'), time(), '1.0', 'daily');
-    $sitemap->add(URL::to('/ar/blog'), time(), '0.9', 'monthly');
-    $sitemap->add(URL::to('/en/blog'), time(), '0.9', 'monthly');
-
+    $sitemap->add(URL::to('/', [], true), time(), '1.0', 'daily');
+    $sitemap->add(URL::to('/en', [], true), time(), '1.0', 'daily');
+    $sitemap->add(URL::to('/ar/blog', [], true), time(), '0.9', 'monthly');
+    $sitemap->add(URL::to('/en/blog', [], true), time(), '0.9', 'monthly');
+    $sitemap->add(URL::to('/ar/team', [], true), time(), '0.9', 'monthly');
+    $sitemap->add(URL::to('/en/team', [], true), time(), '0.9', 'monthly');
     // get all posts from db
     $blog = Blog::all();
     $projects = Project::where("type","project")->get();
@@ -111,14 +120,14 @@ Route::get('genrate-sitemap', function(){
     // add every post to the sitemap
     foreach ($blog as $item)
     {
-        $sitemap->add(URL::to('/ar/blog/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
-        $sitemap->add(URL::to('/en/blog/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
+        $sitemap->add(URL::to('/ar/blog/'.$item->id.'/show', [], true), $item->updated_at, '1.0', 'daily');
+        $sitemap->add(URL::to('/en/blog/'.$item->id.'/show', [], true), $item->updated_at, '1.0', 'daily');
     }
 
     foreach ($projects as $item)
     {
-        $sitemap->add(URL::to('/ar/projects/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
-        $sitemap->add(URL::to('/en/projects/'.$item->id.'/show'), $item->updated_at, '1.0', 'daily');
+        $sitemap->add(URL::to('/ar/projects/'.$item->id.'/show', [], true), $item->updated_at, '1.0', 'daily');
+        $sitemap->add(URL::to('/en/projects/'.$item->id.'/show', [], true), $item->updated_at, '1.0', 'daily');
     }
 
     // generate your sitemap (format, filename)
@@ -128,12 +137,27 @@ Route::get('genrate-sitemap', function(){
     return redirect(url('sitemap.xml'));
 });
 
+/*
+
 Route::get('/', function() {
     return redirect('/ar');
 });
 
+*/
 
 // Front Routes
+
+Route::group(["middleware" => ['language']], function() {
+    
+ Route::get("/", "FrontEnd@index")->name("home");
+});
+
+
+Route::get('/ar', function() {
+    return redirect('/');
+});
+
+
 Route::group(["prefix"=> '{locale}', "middleware" => ['language']], function() {
     
     Route::get("/", "FrontEnd@index")->name("home");
