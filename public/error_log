@@ -1,0 +1,271 @@
+[24-Apr-2023 04:16:51 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:16:54 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:16:55 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:16:55 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:16:56 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:17:32 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:17:33 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:17:33 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 01:18:05 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.33. in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/composer/platform_check.php on line 24
+[24-Apr-2023 04:28:59 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 01:30:33 UTC] PHP Warning:  require(/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:30:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:30:37 UTC] PHP Warning:  require(/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:30:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 04:31:36 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:31:37 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:31:38 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:31:38 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:33:16 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 04:33:19 Asia/Jerusalem] PHP Fatal error:  Uncaught ErrorException: Method ReflectionParameter::getClass() is deprecated in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php:853
+Stack trace:
+#0 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(853): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(816): Illuminate\Container\Container->resolveDependencies()
+#2 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#3 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve()
+#4 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(785): Illuminate\Container\Container->Illuminate\Container\{closure}()
+#5 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build()
+#6 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\Container\Container->resolve()
+#7 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\Container\Container->make()
+#8 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(170): Illuminate\Foundation\Application->make()
+#9 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#10 /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(100): Illuminate\Foundation\Bootstrap\HandleExceptions->renderHttpResponse()
+#11 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleException()
+#12 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 853
+[24-Apr-2023 01:34:59 UTC] PHP Warning:  require(/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:34:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:35:01 UTC] PHP Warning:  require(/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:35:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:37:56 UTC] PHP Warning:  require(/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:37:56 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:38:03 UTC] PHP Warning:  require(/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24
+[24-Apr-2023 01:38:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/eda7hy73qgy6/public_html/tech-go.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/eda7hy73qgy6/public_html/tech-go.net/public/index.php on line 24

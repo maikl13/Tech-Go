@@ -1,0 +1,133 @@
+body,html {
+
+    direction: ltr;
+
+}
+.footer_Logo img {
+    position: relative;
+    right: 50px;
+  }
+  .content__Header .content__Info .titleInfo {
+    font-size: 55px;
+  }
+@media only screen and (min-width: 1201px) {
+
+.image__ContentHeader img {
+
+    width: 90vh !important;
+
+    margin-right: 0px !important;
+
+    margin-left: 200px !important;
+
+}
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+.image__Content::after {
+
+    left: 60% !important;
+
+}
+
+}
+
+@media only screen and (min-width: 1201px) {
+
+.image__Content::after {
+
+    left: 63% !important;
+
+    width: 320px;
+
+    height: 320px;
+
+}
+
+}
+
+.portfolio__Projects .section__title, .cards__Projects .section__title {
+
+    text-align: left;
+
+}
+
+.cards__Projects .all__Cards__Project .card__Project__One .NumCard div {
+
+    right: auto;
+
+    left: -33px;
+
+}
+
+.cards__Projects .all__Cards__Project .card__Project__One .NumCard {
+
+    right: 0;
+
+}
+
+.footer .all__footer .footerOne .subscribe {
+
+    padding-right: 0;
+
+    padding-left: 15px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+.bottom__Content .all__Bottom__Content {
+
+    flex-direction: column;
+
+    text-align: left;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+}
+.content__Header .content__Info .titleInfo {
+    font-size: 30px;
+}
+.Services .section__title .linkTitle {
+
+    justify-content: right;
+
+}
+
+.portfolio__Projects .section__title, .cards__Projects .section__title {
+
+    text-align: center !important;
+
+}
+
+}
+
+.Services .all__services .servOne .info .title {
+
+    font-size: 20px;
+
+}
+
+.Services .all__services .servOne .info .text {
+
+    font-size: 16px;
+
+}
+
+.portfolio__Projects .section__title .text {
+
+    font-size: 22px;
+
+}
+.content__Info {
+    min-width: 400px;
+}
+@media screen and (max-width:776px) {
+    .content__Info {
+        min-width: auto;
+    }
+}

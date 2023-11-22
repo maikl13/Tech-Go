@@ -1,0 +1,15 @@
+User-agent: *
+
+User-agent: Mediapartners-Google* 
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://tech-go.net/sitemap.xml

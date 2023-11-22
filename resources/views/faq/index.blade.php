@@ -1,0 +1,77 @@
+@extends('layouts.template')
+
+@section('content')
+    <div class="col-md-12">
+        <div class="tile">
+            <div class="tile-body">
+
+                <h3 style="color:#333">الاستبيان</h3>
+                <section>
+                    <div class="product-status-wrap border-pdt-ct">
+                        <div class="add-product">
+                            <a href="/admin/faq/create" class="btn btn-outline-primary"> إضافة سؤال</a>
+                        </div>
+                        <table class="table table-hover table-bordered" id="sampleTable" style="margin-top: 10px">
+                            <tr>
+                                <th>السؤال</th>
+                                <th>الإجابة</th>
+                                <th>الحالة</th>
+                                <th ></th>
+                            </tr>
+                            @foreach($faq as $f)
+                                <tr>
+
+                                    <td>
+                                        {{$f->question_ar}}
+                                        </br>
+                                        {{$f->question_en}}
+                                    </td>
+                                    <td>
+                                        @foreach($f->answers as $ans)
+                                        {{$ans->answer_ar}} / {{$ans->answer_en}} ( عدد الاصوات: {{$ans->count}} ) <br/>
+                                        @endforeach
+                                    </td>
+                                    <td>
+                                        @if($f->status == 1)
+                                            مفعل
+                                        @else
+                                            معطل
+                                        @endif
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-outline-primary" href="/admin/faq/{{$f->id}}/edit">تعديل</a>
+                                        
+                                        <a class="btn btn-outline-primary" href="/admin/faq/{{$f->id}}/switch">
+                                            @if($f->status)
+                                                تعطيل
+                                            @else
+                                                تفعيل
+                                            @endif
+                                        </a>
+                                        <a class="btn btn-danger" href="/admin/faq/{{$f->id}}/delete">حذف</a>
+                                    </td>
+                                </tr>
+
+                            @endforeach
+
+                        </table>
+                    </div>
+
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('js')
+    <script>
+        function edit($name) {
+            window.location.href = $name;
+        }
+    </script>
+    <script type="text/javascript" src="{{asset('public/js/plugins/jquery.dataTables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/js/plugins/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript">$('#sampleTable').DataTable();</script>
+@endsection

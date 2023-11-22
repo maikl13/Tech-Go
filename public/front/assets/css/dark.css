@@ -1,0 +1,250 @@
+body, html, .main {
+
+    background-color: #2b2b2b;
+
+}
+
+.header {
+
+    background: #2b2b2b !important;
+
+}
+
+h1,h2,h3,h4,h5,h6,p,span {
+
+    color: white !important;
+
+}
+
+.bottom__Content::after {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.content__Header .content__Info .btnHead a {
+
+    color: #2b2b2b;
+
+}
+
+.header .menu.active {
+
+    background: rgba(0,0,0,0.5)  !important;
+
+}
+
+.buttonAnim a {
+
+    color: #000;
+
+}
+
+#mockup-slider .owl-nav .owl-next, #mockup-slider .owl-nav .owl-prev {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.Services {
+
+    background: rgba(0,0,0,0.5)  !important;;
+
+}
+
+.Services .all__services .servOne .info .title {
+
+    /* color: rgba(0,0,0,0.5)  !important; */
+
+}
+
+.Services .all__services .servOne .info .text {
+
+    color: gray !important;
+
+}
+
+.icon svg {
+
+    /* color: rgba(0,0,0,0.5) ;
+
+    fill: rgba(0,0,0,0.5) ;
+
+    background: rgba(0,0,0,0.5) ;
+
+    padding: 10px;
+
+    border-radius: 8px; */
+
+}
+
+.back__Card .btn {
+
+    background: #2b2b2b !important;
+
+}
+
+.servOne .front__Card ,.servOne .back__Card, .cards__Projects .all__Cards__Project .card__Project__One {
+
+    background: #2b2b2b !important;
+
+}
+
+.servOne .back__Card {
+
+    border: 1px solid rgba(0,0,0,0.5) ;
+
+}
+
+.customer {
+
+    background: #191919
+
+}
+
+.Apps .all__Apps .app__One .contentApp {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.portfolio__Projects .section__title .listFilter .navFilter, .Services .all__services .servOne .btnServices {
+
+    color: white;
+
+}
+
+.portfolio__Projects .all__portfolio__Projects .portOne .btn {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.products-grid {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.testimonials .all__testimonials .testimonial__One {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.contact {
+
+    background: rgba(0,0,0,0.5) ;
+
+}.contact .all__Contact .form__Contact .my-form input, .contact .all__Contact .form__Contact .my-form textarea, .footer .all__footer .footerOne .subscribe input, .blog .mainBlog .left__Blog .formNews form .input {
+
+    background-color: #2b2b2b;
+
+    border-color:#2b2b2b;
+
+}
+
+.contact .all__Contact .right__Contact .call__Us .cont__One {
+
+    background-color: #2b2b2b;
+
+    color: white;
+
+}
+
+.contact .all__Contact .right__Contact .call__Us .cont__One .linkIconText {
+
+    color: white;
+
+}
+
+.technology .all__Technology .technologyOne {
+
+    background-color: #2b2b2b;
+
+}
+
+.footer {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.final__footer {
+
+    background-color: #2b2b2b;
+
+}
+
+.portfolio__Projects .btnMore a, .final__footer .all__final__footer .linkTitle , .final__footer .all__final__footer .finalSocial .finalIconSocial a{
+
+    color: white;
+
+}
+
+.footer .all__footer .footerOne .subscribe {
+
+    background-color: #2b2b2b;
+
+}
+
+.contact .all__Contact .form__Contact .my-form .btn, .portfolio__Projects .btnMore {
+
+    background-color: #2b2b2b;
+
+    color: white;   
+
+}
+
+.header .menu .allMenu .menuLinks {
+
+    background: transparent;
+
+}
+
+.edu-instructor-1 .edu-instructor-info .title a {
+
+    color: white;
+
+}
+
+.blog .allBlog .blogOne {
+
+    background: rgba(0,0,0,0.5) ;
+
+    border-color: rgba(0,0,0,0.5) ;
+
+}
+
+.blog .allBlog .blogOne .content {
+
+    background: rgba(0,0,0,0.5) ;
+
+}
+
+.blog .mainBlog .left__Blog .formNews form .input {
+
+    border: 1px solid white;
+
+}
+.technology .all__Technology .technologyOne img {
+    filter: brightness(0) invert(1);
+}
+.testimonials .all__testimonials .testimonial__One .bottom__Info .LinkTest {
+    color: white;
+}
+.testimonials .all__testimonials .testimonial__One .bottom__Info .LinkTest .arrow svg {
+    fill: white;
+}
+.technology .all__Technology .technologyOne .linkMore {
+    color: white !important;
+}
+@media screen and (max-width:991px) {
+
+    .header .menu .allMenu .menuLinks {
+
+        background: rgba(0,0,0,0.5) ;
+
+    }
+
+}
